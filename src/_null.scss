@@ -1,0 +1,127 @@
+/* ==========================================
+   BASE RESET
+========================================== */
+
+/* Box-sizing для всех элементов */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем стандартные внешние и внутренние отступы */
+body,
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li,
+figure, figcaption,
+blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Списки без маркеров */
+ul, ol {
+  list-style: none;
+}
+
+/* Ссылки наследуют цвет и шрифт, убираем подчёркивание */
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Наследуем шрифты для форм и кнопок */
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  appearance: none;
+}
+
+/* Кнопки по умолчанию inline-block */
+button {
+  display: inline-block;
+}
+
+/* Инпуты и textarea занимают всю ширину при необходимости */
+input, textarea, select {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border-radius: 0;
+  line-height: 1.2;
+}
+
+/* Изображения без ограничений, масштабируются по контейнеру */
+img, picture, video, canvas, svg {
+  display: block;
+
+
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Наследуем шрифты для всех инлайн-элементов */
+small, strong, b, i, em, span {
+  font: inherit;
+  line-height: 1.2;
+}
+
+/* Абстрактные элементы */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0;
+}
+
+/* Для article/section и других блочных элементов */
+article, aside, details, figcaption, figure,
+footer, header, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* Упрощаем работу с формами для доступности */
+label {
+  cursor: pointer;
+}
+
+/* Анимации для людей, которые предпочитают reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Сбрасываем списки внутри ul/ol */
+li {
+  list-style: none;
+}
+
+/* Сбрасываем паддинги для fieldset */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Сбрасываем стрелки у select для Chrome */
+select::-ms-expand {
+  display: none;
+}
+
+/* Убираем стандартные outline для форм (но подумай о фокусе для доступности) */
+:focus {
+  outline: none;
+}

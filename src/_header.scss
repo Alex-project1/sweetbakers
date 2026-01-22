@@ -1,0 +1,53 @@
+.header{
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    ul{
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  .header {
+    // background-color: #40c6cf; /* твой фон */
+    padding: 20px 0;
+    position: fixed;
+    top: 10px;
+    z-index: 2;
+    width: 100%;
+    &__wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      background-color: #fff;
+      border-radius: 100px;
+      padding: 20px 60px;
+    }
+    
+    .nav a, .contacts a, .contacts span {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #5c3b26; /* цвет текста */
+      font-weight: 500;
+    }
+    
+    .logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%); /* поднимаем над полосой */
+      z-index: 2;
+    }
+    
+    .logo svg {
+      display: block;
+      width: 120px; /* размер логотипа */
+      height: auto;
+    }
+    
+  }
+  
