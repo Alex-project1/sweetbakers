@@ -34,9 +34,11 @@ window.addEventListener('load', () => {
 });
 
 
-/* SWIPER */
 document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.mySwiper', {
+  const swiperEl = document.querySelector('.mySwiper');
+  if (!swiperEl) return;
+
+  new Swiper(swiperEl, {
     modules: [Navigation, Autoplay, EffectFade],
 
     effect: 'fade',
